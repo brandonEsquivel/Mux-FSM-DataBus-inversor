@@ -3,6 +3,10 @@
 # How to make/build
 - if just feel lazy, just -make all-. 
 - In the makefile you can find detailed information of synthesis, compilation and others.
+# MODULES
+- register.v : its used to change the order of the words. It looks like a small memory block.
+- FSM.v : contains the control logic of the data flow and control flags for the inverter module
+- FSM_MUX : top module, incorporates the instances of the necessary blocks as well as miselanic and transition logic
 # Author
 - Brandon Esquivel Molina, brandon.esquivel@ucr.ac.cr
 
