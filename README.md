@@ -20,12 +20,6 @@
 - FSM.v: contiene la lógica de control del flujo de datos y las banderas de control para el módulo inversor.
 - FSM_MUX: módulo top en la jerarquía, incorpora las instancias de los bloques necesarios, así como la lógica miselánea y de transición general.
 
-
-# MÓDULOS
-- register.v: se usa para cambiar el orden de las palabras. Parece un pequeño bloque de memoria.
-- FSM.v: contiene la lógica de control del flujo de datos y las banderas de control para el módulo inversor
-- FSM_MUX: módulo superior, incorpora las instancias de los bloques necesarios, así como la lógica de transición y miselanic
-
 # Author
 - Brandon Esquivel Molina, brandon.esquivel@ucr.ac.cr
 
