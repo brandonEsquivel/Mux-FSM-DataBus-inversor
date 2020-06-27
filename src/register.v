@@ -28,7 +28,7 @@ parameter WORD_SIZE = 4
 // INTERNAL NODES
 reg [WORD_SIZE-1:0] mem;
 
-    always @ (posedge clk) begin
+    always @ (*) begin
         if(!reset) begin
             mem <= 0;
             out <= 0;

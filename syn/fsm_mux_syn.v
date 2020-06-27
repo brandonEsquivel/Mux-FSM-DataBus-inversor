@@ -45,24 +45,25 @@ module \$paramod\msf_syn\WORD_SIZE=4 (clk, reset, MSW, LSW, Error_out, active_st
   wire [3:0] _029_;
   wire [4:0] _030_;
   wire [4:0] _031_;
-  wire _032_;
+  wire [4:0] _032_;
   wire _033_;
   wire _034_;
   wire _035_;
   wire _036_;
   wire _037_;
+  wire _038_;
   (* src = "./src/fsm.v:151|./src/fsm.v:109|<techmap.v>:432" *)
-  wire [9:0] _038_;
+  wire [9:0] _039_;
   (* src = "./src/fsm.v:151|./src/fsm.v:109|<techmap.v>:428" *)
-  wire [4:0] _039_;
-  wire _040_;
+  wire [4:0] _040_;
   wire _041_;
   wire _042_;
-  wire [4:0] _043_;
-  wire [1:0] _044_;
-  wire _045_;
-  (* src = "./src/fsm.v:151|./src/fsm.v:109|<techmap.v>:445" *)
+  wire _043_;
+  wire [4:0] _044_;
+  wire [1:0] _045_;
   wire _046_;
+  (* src = "./src/fsm.v:151|./src/fsm.v:109|<techmap.v>:445" *)
+  wire _047_;
   (* src = "./src/fsm.v:29" *)
   output Error_out;
   (* src = "./src/fsm.v:27" *)
@@ -83,81 +84,75 @@ module \$paramod\msf_syn\WORD_SIZE=4 (clk, reset, MSW, LSW, Error_out, active_st
   input reset;
   (* src = "./src/fsm.v:34" *)
   wire [4:0] state;
-  assign _013_[1] = _040_ | _037_;
+  assign _013_[1] = _041_ | _038_;
   assign _014_ = _013_[0] | _013_[1];
-  assign _010_ = _014_ | _036_;
-  assign _013_[0] = _042_ | _041_;
-  assign _011_ = _013_[0] | _040_;
-  assign _015_ = _042_ | _037_;
-  assign _009_ = _015_ | _036_;
+  assign _010_ = _014_ | _037_;
+  assign _013_[0] = _043_ | _042_;
+  assign _011_ = _013_[0] | _041_;
+  assign _015_ = _043_ | _038_;
+  assign _009_ = _015_ | _037_;
   assign _016_[0] = _028_[0] |(* src = "./src/fsm.v:131" *)  _028_[1];
   assign _016_[1] = _028_[2] |(* src = "./src/fsm.v:131" *)  _028_[3];
   assign _005_[0] = _016_[0] |(* src = "./src/fsm.v:131" *)  _016_[1];
   assign _017_[0] = _029_[0] |(* src = "./src/fsm.v:135" *)  _029_[1];
   assign _017_[1] = MSW[2] |(* src = "./src/fsm.v:135" *)  MSW[3];
   assign _006_ = _017_[0] |(* src = "./src/fsm.v:135" *)  _017_[1];
-  assign _018_[0] = _030_[0] |(* src = "./src/fsm.v:79|./src/fsm.v:62" *)  _030_[1];
-  assign _019_ = _018_[0] |(* src = "./src/fsm.v:79|./src/fsm.v:62" *)  _018_[1];
-  assign _032_ = _019_ |(* src = "./src/fsm.v:79|./src/fsm.v:62" *)  state[4];
-  assign _020_[0] = state[0] |(* src = "./src/fsm.v:86|./src/fsm.v:62" *)  state[1];
-  assign _018_[1] = _030_[2] |(* src = "./src/fsm.v:86|./src/fsm.v:62" *)  _030_[3];
-  assign _021_ = _020_[0] |(* src = "./src/fsm.v:86|./src/fsm.v:62" *)  _018_[1];
-  assign _033_ = _021_ |(* src = "./src/fsm.v:86|./src/fsm.v:62" *)  state[4];
-  assign _022_[0] = state[0] |(* src = "./src/fsm.v:74|./src/fsm.v:62" *)  _030_[1];
+  assign _019_ = _018_[0] |(* src = "./src/fsm.v:86|./src/fsm.v:62" *)  _018_[1];
+  assign _033_ = _019_ |(* src = "./src/fsm.v:86|./src/fsm.v:62" *)  state[4];
+  assign _020_[0] = _031_[0] |(* src = "./src/fsm.v:79|./src/fsm.v:62" *)  _031_[1];
+  assign _018_[1] = _030_[2] |(* src = "./src/fsm.v:79|./src/fsm.v:62" *)  _030_[3];
+  assign _021_ = _020_[0] |(* src = "./src/fsm.v:79|./src/fsm.v:62" *)  _018_[1];
+  assign _034_ = _021_ |(* src = "./src/fsm.v:79|./src/fsm.v:62" *)  state[4];
+  assign _022_[0] = state[0] |(* src = "./src/fsm.v:74|./src/fsm.v:62" *)  _031_[1];
   assign _022_[1] = state[2] |(* src = "./src/fsm.v:74|./src/fsm.v:62" *)  _030_[3];
   assign _023_ = _022_[0] |(* src = "./src/fsm.v:74|./src/fsm.v:62" *)  _022_[1];
-  assign _034_ = _023_ |(* src = "./src/fsm.v:74|./src/fsm.v:62" *)  _031_[4];
-  assign _024_[0] = _030_[0] |(* src = "./src/fsm.v:68|./src/fsm.v:62" *)  state[1];
-  assign _024_[1] = state[2] |(* src = "./src/fsm.v:68|./src/fsm.v:62" *)  state[3];
+  assign _035_ = _023_ |(* src = "./src/fsm.v:74|./src/fsm.v:62" *)  _032_[4];
+  assign _024_[0] = _031_[0] |(* src = "./src/fsm.v:68|./src/fsm.v:62" *)  state[1];
   assign _025_ = _024_[0] |(* src = "./src/fsm.v:68|./src/fsm.v:62" *)  _024_[1];
-  assign _035_ = _025_ |(* src = "./src/fsm.v:68|./src/fsm.v:62" *)  state[4];
-  assign _012_ = _037_ | _036_;
-  assign _039_[0] = _011_ |(* src = "./src/fsm.v:151|./src/fsm.v:109|<techmap.v>:441" *)  _038_[5];
-  assign _046_ = _011_ |(* src = "./src/fsm.v:151|./src/fsm.v:109|<techmap.v>:445" *)  _012_;
-  assign _026_ = _020_[0] |(* src = "./src/fsm.v:63|./src/fsm.v:62" *)  _024_[1];
+  assign _036_ = _025_ |(* src = "./src/fsm.v:68|./src/fsm.v:62" *)  state[4];
+  assign _012_ = _038_ | _037_;
+  assign _040_[0] = _011_ |(* src = "./src/fsm.v:151|./src/fsm.v:109|<techmap.v>:441" *)  _039_[5];
+  assign _047_ = _011_ |(* src = "./src/fsm.v:151|./src/fsm.v:109|<techmap.v>:445" *)  _012_;
+  assign _018_[0] = state[0] |(* src = "./src/fsm.v:63|./src/fsm.v:62" *)  state[1];
+  assign _024_[1] = state[2] |(* src = "./src/fsm.v:63|./src/fsm.v:62" *)  state[3];
+  assign _026_ = _018_[0] |(* src = "./src/fsm.v:63|./src/fsm.v:62" *)  _024_[1];
   assign _027_ = _026_ |(* src = "./src/fsm.v:63|./src/fsm.v:62" *)  state[4];
-  assign _041_ = ~(* src = "./src/fsm.v:79|./src/fsm.v:62" *) _032_;
-  assign _040_ = ~(* src = "./src/fsm.v:86|./src/fsm.v:62" *) _033_;
-  assign _037_ = ~(* src = "./src/fsm.v:74|./src/fsm.v:62" *) _034_;
-  assign _036_ = ~(* src = "./src/fsm.v:68|./src/fsm.v:62" *) _035_;
-  assign _042_ = ~(* src = "./src/fsm.v:63|./src/fsm.v:62" *) _027_;
+  assign _041_ = ~(* src = "./src/fsm.v:86|./src/fsm.v:62" *) _033_;
+  assign _042_ = ~(* src = "./src/fsm.v:79|./src/fsm.v:62" *) _034_;
+  assign _038_ = ~(* src = "./src/fsm.v:74|./src/fsm.v:62" *) _035_;
+  assign _037_ = ~(* src = "./src/fsm.v:68|./src/fsm.v:62" *) _036_;
+  assign _043_ = ~(* src = "./src/fsm.v:63|./src/fsm.v:62" *) _027_;
   assign _005_[1] = _005_[0] ? (* src = "./src/fsm.v:131" *) 1'h1 : _007_[4];
   assign _004_ = _005_[0] ? (* src = "./src/fsm.v:131" *) 1'h1 : _006_;
   assign _005_[4] = _005_[0] ? (* src = "./src/fsm.v:131" *) 1'h0 : _007_[4];
   assign _007_[4] = ~(* src = "./src/fsm.v:120" *) _006_;
   assign next_error = _012_ ? (* src = "./src/fsm.v:130|./src/fsm.v:109" *) _004_ : 1'h0;
-  assign _043_[0] = _010_ ? (* src = "./src/fsm.v:86|./src/fsm.v:62" *) state[0] : 1'h0;
-  assign _043_[1] = _010_ ? (* src = "./src/fsm.v:86|./src/fsm.v:62" *) state[1] : 1'h0;
-  assign _043_[2] = _010_ ? (* src = "./src/fsm.v:86|./src/fsm.v:62" *) state[2] : 1'h0;
-  assign _043_[3] = _010_ ? (* src = "./src/fsm.v:86|./src/fsm.v:62" *) state[3] : 1'h0;
-  assign _043_[4] = _010_ ? (* src = "./src/fsm.v:86|./src/fsm.v:62" *) state[4] : 1'h0;
-  assign _001_[0] = reset ? (* src = "./src/fsm.v:50" *) _043_[0] : 1'h0;
-  assign _001_[1] = reset ? (* src = "./src/fsm.v:50" *) _043_[1] : 1'h0;
-  assign _001_[2] = reset ? (* src = "./src/fsm.v:50" *) _043_[2] : 1'h0;
-  assign _001_[3] = reset ? (* src = "./src/fsm.v:50" *) _043_[3] : 1'h0;
-  assign _001_[4] = reset ? (* src = "./src/fsm.v:50" *) _043_[4] : 1'h0;
-  assign _044_[0] = _009_ ? (* src = "./src/fsm.v:74|./src/fsm.v:62" *) _008_[0] : 1'h0;
-  assign _044_[1] = _009_ ? (* src = "./src/fsm.v:74|./src/fsm.v:62" *) _008_[1] : 1'h0;
-  assign _002_[0] = reset ? (* src = "./src/fsm.v:50" *) _044_[0] : 1'h0;
-  assign _002_[1] = reset ? (* src = "./src/fsm.v:50" *) _044_[1] : 1'h0;
+  assign _044_[0] = _010_ ? (* src = "./src/fsm.v:86|./src/fsm.v:62" *) state[0] : 1'h0;
+  assign _044_[1] = _010_ ? (* src = "./src/fsm.v:86|./src/fsm.v:62" *) state[1] : 1'h0;
+  assign _044_[2] = _010_ ? (* src = "./src/fsm.v:86|./src/fsm.v:62" *) state[2] : 1'h0;
+  assign _044_[3] = _010_ ? (* src = "./src/fsm.v:86|./src/fsm.v:62" *) state[3] : 1'h0;
+  assign _044_[4] = _010_ ? (* src = "./src/fsm.v:86|./src/fsm.v:62" *) state[4] : 1'h0;
+  assign _001_[0] = reset ? (* src = "./src/fsm.v:50" *) _044_[0] : 1'h0;
+  assign _001_[1] = reset ? (* src = "./src/fsm.v:50" *) _044_[1] : 1'h0;
+  assign _001_[2] = reset ? (* src = "./src/fsm.v:50" *) _044_[2] : 1'h0;
+  assign _001_[3] = reset ? (* src = "./src/fsm.v:50" *) _044_[3] : 1'h0;
+  assign _001_[4] = reset ? (* src = "./src/fsm.v:50" *) _044_[4] : 1'h0;
+  assign _045_[0] = _009_ ? (* src = "./src/fsm.v:74|./src/fsm.v:62" *) _008_[0] : 1'h0;
+  assign _045_[1] = _009_ ? (* src = "./src/fsm.v:74|./src/fsm.v:62" *) _008_[1] : 1'h0;
+  assign _002_[0] = reset ? (* src = "./src/fsm.v:50" *) _045_[0] : 1'h0;
+  assign _002_[1] = reset ? (* src = "./src/fsm.v:50" *) _045_[1] : 1'h0;
+  assign _046_ = _010_ ? (* src = "./src/fsm.v:86|./src/fsm.v:62" *) next_error : 1'h0;
+  assign _000_ = reset ? (* src = "./src/fsm.v:50" *) _046_ : Error_out;
   assign _003_[0] = reset ? (* src = "./src/fsm.v:50" *) next_state[0] : 1'h0;
   assign _003_[1] = reset ? (* src = "./src/fsm.v:50" *) next_state[1] : 1'h0;
   assign _003_[2] = reset ? (* src = "./src/fsm.v:50" *) next_state[2] : 1'h0;
   assign _003_[3] = reset ? (* src = "./src/fsm.v:50" *) next_state[3] : 1'h0;
   assign _003_[4] = reset ? (* src = "./src/fsm.v:50" *) next_state[4] : 1'h0;
-  assign _045_ = _010_ ? (* src = "./src/fsm.v:86|./src/fsm.v:62" *) next_error : 1'h0;
-  assign _000_ = reset ? (* src = "./src/fsm.v:50" *) _045_ : Error_out;
-  assign next_state[0] = _046_ ? (* src = "./src/fsm.v:151|./src/fsm.v:109|<techmap.v>:445" *) _039_[0] : 1'h0;
-  assign next_state[1] = _046_ ? (* src = "./src/fsm.v:151|./src/fsm.v:109|<techmap.v>:445" *) _038_[6] : 1'h1;
-  assign next_state[2] = _046_ ? (* src = "./src/fsm.v:151|./src/fsm.v:109|<techmap.v>:445" *) _038_[7] : 1'h0;
-  assign next_state[3] = _046_ ? (* src = "./src/fsm.v:151|./src/fsm.v:109|<techmap.v>:445" *) _012_ : 1'h1;
-  assign next_state[4] = _046_ ? (* src = "./src/fsm.v:151|./src/fsm.v:109|<techmap.v>:445" *) _038_[9] : 1'h1;
-  (* src = "./src/fsm.v:49" *)
-  DFF _116_ (
-    .C(clk),
-    .D(_000_),
-    .Q(Error_out)
-  );
+  assign next_state[0] = _047_ ? (* src = "./src/fsm.v:151|./src/fsm.v:109|<techmap.v>:445" *) _040_[0] : 1'h0;
+  assign next_state[1] = _047_ ? (* src = "./src/fsm.v:151|./src/fsm.v:109|<techmap.v>:445" *) _039_[6] : 1'h1;
+  assign next_state[2] = _047_ ? (* src = "./src/fsm.v:151|./src/fsm.v:109|<techmap.v>:445" *) _039_[7] : 1'h0;
+  assign next_state[3] = _047_ ? (* src = "./src/fsm.v:151|./src/fsm.v:109|<techmap.v>:445" *) _012_ : 1'h1;
+  assign next_state[4] = _047_ ? (* src = "./src/fsm.v:151|./src/fsm.v:109|<techmap.v>:445" *) _039_[9] : 1'h1;
   (* src = "./src/fsm.v:49" *)
   DFF _117_ (
     .C(clk),
@@ -191,41 +186,47 @@ module \$paramod\msf_syn\WORD_SIZE=4 (clk, reset, MSW, LSW, Error_out, active_st
   (* src = "./src/fsm.v:49" *)
   DFF _122_ (
     .C(clk),
+    .D(_000_),
+    .Q(Error_out)
+  );
+  (* src = "./src/fsm.v:49" *)
+  DFF _123_ (
+    .C(clk),
     .D(_002_[0]),
     .Q(iterator[0])
   );
   (* src = "./src/fsm.v:49" *)
-  DFF _123_ (
+  DFF _124_ (
     .C(clk),
     .D(_002_[1]),
     .Q(iterator[1])
   );
   (* src = "./src/fsm.v:49" *)
-  DFF _124_ (
+  DFF _125_ (
     .C(clk),
     .D(_001_[0]),
     .Q(active_state[0])
   );
   (* src = "./src/fsm.v:49" *)
-  DFF _125_ (
+  DFF _126_ (
     .C(clk),
     .D(_001_[1]),
     .Q(active_state[1])
   );
   (* src = "./src/fsm.v:49" *)
-  DFF _126_ (
+  DFF _127_ (
     .C(clk),
     .D(_001_[2]),
     .Q(active_state[2])
   );
   (* src = "./src/fsm.v:49" *)
-  DFF _127_ (
+  DFF _128_ (
     .C(clk),
     .D(_001_[3]),
     .Q(active_state[3])
   );
   (* src = "./src/fsm.v:49" *)
-  DFF _128_ (
+  DFF _129_ (
     .C(clk),
     .D(_001_[4]),
     .Q(active_state[4])
@@ -236,15 +237,15 @@ module \$paramod\msf_syn\WORD_SIZE=4 (clk, reset, MSW, LSW, Error_out, active_st
   assign _028_[3] = LSW[3] ^(* src = "./src/fsm.v:131" *)  1'h1;
   assign _029_[0] = MSW[0] ^(* src = "./src/fsm.v:135" *)  iterator[0];
   assign _029_[1] = MSW[1] ^(* src = "./src/fsm.v:135" *)  iterator[1];
-  assign _030_[2] = state[2] ^(* src = "./src/fsm.v:86|./src/fsm.v:62" *)  1'h1;
-  assign _030_[1] = state[1] ^(* src = "./src/fsm.v:74|./src/fsm.v:62" *)  1'h1;
+  assign _030_[2] = state[2] ^(* src = "./src/fsm.v:79|./src/fsm.v:62" *)  1'h1;
+  assign _031_[1] = state[1] ^(* src = "./src/fsm.v:74|./src/fsm.v:62" *)  1'h1;
   assign _030_[3] = state[3] ^(* src = "./src/fsm.v:74|./src/fsm.v:62" *)  1'h1;
-  assign _031_[4] = state[4] ^(* src = "./src/fsm.v:74|./src/fsm.v:62" *)  1'h1;
-  assign _030_[0] = state[0] ^(* src = "./src/fsm.v:68|./src/fsm.v:62" *)  1'h1;
-  assign _038_[5] = _005_[0] &(* src = "./src/fsm.v:151|./src/fsm.v:109|<techmap.v>:434" *)  _012_;
-  assign _038_[6] = _005_[1] &(* src = "./src/fsm.v:151|./src/fsm.v:109|<techmap.v>:434" *)  _012_;
-  assign _038_[7] = _004_ &(* src = "./src/fsm.v:151|./src/fsm.v:109|<techmap.v>:434" *)  _012_;
-  assign _038_[9] = _005_[4] &(* src = "./src/fsm.v:151|./src/fsm.v:109|<techmap.v>:434" *)  _012_;
+  assign _032_[4] = state[4] ^(* src = "./src/fsm.v:74|./src/fsm.v:62" *)  1'h1;
+  assign _031_[0] = state[0] ^(* src = "./src/fsm.v:68|./src/fsm.v:62" *)  1'h1;
+  assign _039_[5] = _005_[0] &(* src = "./src/fsm.v:151|./src/fsm.v:109|<techmap.v>:434" *)  _012_;
+  assign _039_[6] = _005_[1] &(* src = "./src/fsm.v:151|./src/fsm.v:109|<techmap.v>:434" *)  _012_;
+  assign _039_[7] = _004_ &(* src = "./src/fsm.v:151|./src/fsm.v:109|<techmap.v>:434" *)  _012_;
+  assign _039_[9] = _005_[4] &(* src = "./src/fsm.v:151|./src/fsm.v:109|<techmap.v>:434" *)  _012_;
   assign _008_[1] = iterator[1] ^(* src = "./src/fsm.v:57|<techmap.v>:263" *)  iterator[0];
   assign _008_[0] = iterator[0] ^(* src = "./src/fsm.v:57|<techmap.v>:262" *)  1'h1;
   assign _005_[3:2] = { 1'h1, _004_ };
@@ -252,19 +253,16 @@ module \$paramod\msf_syn\WORD_SIZE=4 (clk, reset, MSW, LSW, Error_out, active_st
   assign _008_[31:3] = 29'h00000000;
   assign _020_[1] = _018_[1];
   assign _029_[3:2] = MSW[3:2];
-  assign _030_[4] = state[4];
-  assign _031_[3:0] = { _030_[3], state[2], _030_[1], state[0] };
-  assign { _038_[8], _038_[4:0] } = { _012_, 4'h0, _011_ };
-  assign _039_[4:1] = { _038_[9], _012_, _038_[7:6] };
+  assign { _030_[4], _030_[1:0] } = { state[4], state[1:0] };
+  assign _031_[4:2] = { state[4], _030_[3:2] };
+  assign _032_[3:0] = { _030_[3], state[2], _031_[1], state[0] };
+  assign { _039_[8], _039_[4:0] } = { _012_, 4'h0, _011_ };
+  assign _040_[4:1] = { _039_[9], _012_, _039_[7:6] };
 endmodule
 
 (* dynports =  1  *)
 (* src = "./src/register.v:17" *)
 module \$paramod\regid_syn\WORD_SIZE=4 (data_in, clk, reset, out);
-  (* src = "./src/register.v:31" *)
-  wire [3:0] _00_;
-  (* src = "./src/register.v:31" *)
-  wire [3:0] _01_;
   (* src = "./src/register.v:23" *)
   input clk;
   (* src = "./src/register.v:22" *)
@@ -275,62 +273,11 @@ module \$paramod\regid_syn\WORD_SIZE=4 (data_in, clk, reset, out);
   output [3:0] out;
   (* src = "./src/register.v:24" *)
   input reset;
-  assign _01_[0] = reset ? (* src = "./src/register.v:32" *) mem[0] : 1'h0;
-  assign _01_[1] = reset ? (* src = "./src/register.v:32" *) mem[1] : 1'h0;
-  assign _01_[2] = reset ? (* src = "./src/register.v:32" *) mem[2] : 1'h0;
-  assign _01_[3] = reset ? (* src = "./src/register.v:32" *) mem[3] : 1'h0;
-  assign _00_[0] = reset ? (* src = "./src/register.v:32" *) data_in[0] : 1'h0;
-  assign _00_[1] = reset ? (* src = "./src/register.v:32" *) data_in[1] : 1'h0;
-  assign _00_[2] = reset ? (* src = "./src/register.v:32" *) data_in[2] : 1'h0;
-  assign _00_[3] = reset ? (* src = "./src/register.v:32" *) data_in[3] : 1'h0;
-  (* src = "./src/register.v:31" *)
-  DFF _10_ (
-    .C(clk),
-    .D(_00_[0]),
-    .Q(mem[0])
-  );
-  (* src = "./src/register.v:31" *)
-  DFF _11_ (
-    .C(clk),
-    .D(_00_[1]),
-    .Q(mem[1])
-  );
-  (* src = "./src/register.v:31" *)
-  DFF _12_ (
-    .C(clk),
-    .D(_00_[2]),
-    .Q(mem[2])
-  );
-  (* src = "./src/register.v:31" *)
-  DFF _13_ (
-    .C(clk),
-    .D(_00_[3]),
-    .Q(mem[3])
-  );
-  (* src = "./src/register.v:31" *)
-  DFF _14_ (
-    .C(clk),
-    .D(_01_[0]),
-    .Q(out[0])
-  );
-  (* src = "./src/register.v:31" *)
-  DFF _15_ (
-    .C(clk),
-    .D(_01_[1]),
-    .Q(out[1])
-  );
-  (* src = "./src/register.v:31" *)
-  DFF _16_ (
-    .C(clk),
-    .D(_01_[2]),
-    .Q(out[2])
-  );
-  (* src = "./src/register.v:31" *)
-  DFF _17_ (
-    .C(clk),
-    .D(_01_[3]),
-    .Q(out[3])
-  );
+  assign out[0] = reset ? (* src = "./src/register.v:32" *) data_in[0] : 1'h0;
+  assign out[1] = reset ? (* src = "./src/register.v:32" *) data_in[1] : 1'h0;
+  assign out[2] = reset ? (* src = "./src/register.v:32" *) data_in[2] : 1'h0;
+  assign out[3] = reset ? (* src = "./src/register.v:32" *) data_in[3] : 1'h0;
+  assign mem = data_in;
 endmodule
 
 (* dynports =  1  *)
